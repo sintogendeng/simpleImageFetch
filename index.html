@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>Simple Vuejs Auto Image Fetch</title>
+		<script src="https://unpkg.com/vue"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<h1 align="center">Simple Auto Image Fetch</h1>
+		<div class="container" align="center" id="placement">
+		<table class="table">
+		<thead>
+			<th class="col-sm-4">Url Links</th><th class="col-sm-2">Widht</th><th class="col-sm-2">Height</th>
+		</thead>
+		<tbody>
+			<tr>
+			<td><input v-model="url" placeholder="edit me" class="col-sm-12"></td>
+			<td><input v-model="width" placeholder="200" ></td>
+			<td><input v-model="height" placeholder="300"></td>
+			</tr>
+		</tbody>
+		</table>
+  		<img v-bind:src="url" v-bind:width="width" v-bind:height="height">
+		</div>
+	</body>
+	<script>
+var app6 = new Vue({
+  el: '#placement',
+  data: {
+    url: 'https://s-media-cache-ak0.pinimg.com/originals/b8/fe/0d/b8fe0da10ed33f5a31a44ae9d03cd40e.jpg',
+    width: "40%",
+    height: "60%"
+  }
+})
+	</script>
+</html>
